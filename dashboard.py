@@ -19,7 +19,6 @@ def get_data() -> pd.DataFrame:
 df = get_data()
 
 # dashboard title
-st.snow()
 st.title("ML-04 Dashboard")
 
 # top-level filters
