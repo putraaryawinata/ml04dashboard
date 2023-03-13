@@ -32,7 +32,18 @@ with col2:
 ascending = ascending == "asc"
 df = df.sort_values(by=sort_by, ascending=ascending)
 
-# show dataframe
-col = st.columns(1)
 st.markdown("### Detailed Data View")
-df = st.dataframe(df)
+
+# CSS to inject contained in a string
+hide_table_row_index = """
+            <style>
+            thead tr th:first-child {display:none}
+            tbody th {display:none}
+            </style>
+            """
+
+# Inject CSS with Markdown
+st.markdown(hide_table_row_index, unsafe_allow_html=True)
+
+# show table
+df = st.table(df)
