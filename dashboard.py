@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 import time
 
-dataset = "Cohort ML-04 Member - Sheet3.csv"
+dataset = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSB5F8jSBATdUPeSoxvD4FquT-uEtrBx5IopAejKpLCHf9RrgwwcbrXWbPwi7CdODxO8BcahV3R04dJ/pub?gid=730914547&single=true&output=csv"
 
 st.set_page_config(
     page_title="Real-Time Data Science Dashboard",
