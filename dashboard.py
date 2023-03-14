@@ -2,17 +2,19 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 import time
+from PIL import Image
 
 dataset = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSB5F8jSBATdUPeSoxvD4FquT-uEtrBx5IopAejKpLCHf9RrgwwcbrXWbPwi7CdODxO8BcahV3R04dJ/pub?gid=730914547&single=true&output=csv"
 
+im = Image.open("icon.jpg")
 st.set_page_config(
-    page_title="Real-Time Data Science Dashboard",
-    page_icon="✅",
+    page_title="Real-Time ML-04 Dashboard",
+    page_icon=im,
     layout="wide",
 )
 
 # read csv from a URL
-@st.cache_data
+# @st.cache_data
 def get_data() -> pd.DataFrame:
     return pd.read_csv(dataset)
 
